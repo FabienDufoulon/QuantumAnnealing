@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="TQA" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/TQA" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add directory="include" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/TQA" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="include/PCG/pcg_extras.hpp" />
+		<Unit filename="include/PCG/pcg_random.hpp" />
+		<Unit filename="include/PCG/pcg_uint128.hpp" />
+		<Unit filename="include/Solver/Annealing.h" />
+		<Unit filename="include/Solver/ElementaryMutation.h" />
+		<Unit filename="include/Solver/Function.h" />
+		<Unit filename="include/Solver/KineticEnergy.h" />
+		<Unit filename="include/Solver/LinearFunction.h" />
+		<Unit filename="include/Solver/Mutation.h" />
+		<Unit filename="include/Solver/Node.h" />
+		<Unit filename="include/Solver/PotentialEnergy.h" />
+		<Unit filename="include/Solver/Problem.h" />
+		<Unit filename="include/Solver/QuantumAnnealing.h" />
+		<Unit filename="include/Solver/QuantumAnnealingBounded.h" />
+		<Unit filename="include/Solver/SimulatedAnnealing.h" />
+		<Unit filename="include/Solver/State.h" />
+		<Unit filename="include/VertexColoring/Coloring.h" />
+		<Unit filename="include/VertexColoring/Conflicts.h" />
+		<Unit filename="include/VertexColoring/Graph.h" />
+		<Unit filename="include/VertexColoring/KineticConflicts.h" />
+		<Unit filename="include/VertexColoring/VertexConflictMutation.h" />
+		<Unit filename="include/VertexColoring/VertexElementaryMutation.h" />
+		<Unit filename="src/Solver/LinearFunction.cpp" />
+		<Unit filename="src/VertexColoring/Coloring.cpp" />
+		<Unit filename="src/VertexColoring/Graph.cpp" />
+		<Unit filename="src/run.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

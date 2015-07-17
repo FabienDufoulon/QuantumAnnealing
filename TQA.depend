@@ -1,0 +1,407 @@
+# depslib dependency file v1.0
+1437122484 source:c:\cproj\tqa\src\run.cpp
+	<iostream>
+	"Solver/Problem.h"
+	"VertexColoring/Graph.h"
+	"VertexColoring/Coloring.h"
+	"Solver/Mutation.h"
+	"Solver/LinearFunction.h"
+	"VertexColoring/Conflicts.h"
+	"Solver/SimulatedAnnealing.h"
+	"VertexColoring/KineticConflicts.h"
+	"Solver/QuantumAnnealing.h"
+	"Solver/QuantumAnnealingBounded.h"
+	"VertexColoring/VertexConflictMutation.h"
+
+1436558939 source:c:\cproj\tqa\src\problem.cpp
+	"Problem.h"
+
+1436903705 c:\cproj\tqa\include\problem.h
+	<vector>
+	<map>
+	<memory>
+	<iostream>
+	"pcg_random.hpp"
+
+1436709882 c:\cproj\tqa\include\potentialenergy.h
+	<iostream>
+
+1436893328 c:\cproj\tqa\include\state.h
+	"ElementaryMutation.h"
+	"pcg_random.hpp"
+	<memory>
+
+1436557738 c:\cproj\tqa\include\elementarymutation.h
+
+1418655672 c:\cproj\tqa\include\pcg_random.hpp
+	<cinttypes>
+	<cstddef>
+	<cstdlib>
+	<cstring>
+	<cassert>
+	<limits>
+	<iostream>
+	<type_traits>
+	<utility>
+	<locale>
+	<new>
+	<stdexcept>
+	"pcg_extras.hpp"
+
+1418655672 c:\cproj\tqa\include\pcg_extras.hpp
+	<cinttypes>
+	<cstddef>
+	<cstdlib>
+	<cstring>
+	<cassert>
+	<limits>
+	<iostream>
+	<type_traits>
+	<utility>
+	<locale>
+	<iterator>
+	<utility>
+	<cxxabi.h>
+	"pcg_uint128.hpp"
+
+1418655672 c:\cproj\tqa\include\pcg_uint128.hpp
+	<cstdint>
+	<cstdio>
+	<cassert>
+	<climits>
+	<utility>
+	<initializer_list>
+	<type_traits>
+
+1436783566 c:\cproj\tqa\include\kineticenergy.h
+
+1436899754 c:\cproj\tqa\include\mutation.h
+	"pcg_random.hpp"
+
+1436563944 c:\cproj\tqa\include\graph.h
+	<fstream>
+	<sstream>
+	<cstdlib>
+	<vector>
+	<iostream>
+
+1436987802 c:\cproj\tqa\include\coloring.h
+	"State.h"
+	"Graph.h"
+	<random>
+	<algorithm>
+	"VertexElementaryMutation.h"
+
+1436563275 c:\cproj\tqa\include\vertexelementarymutation.h
+	<ElementaryMutation.h>
+
+1436987321 source:c:\cproj\tqa\src\coloring.cpp
+	"Coloring.h"
+
+1436563937 source:c:\cproj\tqa\src\graph.cpp
+	"Graph.h"
+
+1435960411 c:\cproj\tqa\include\linearfunction.h
+	<Function.h>
+	<iostream>
+
+1435697197 c:\cproj\tqa\include\function.h
+
+1436905820 source:c:\cproj\tqa\src\linearfunction.cpp
+	"LinearFunction.h"
+
+1436987371 c:\cproj\tqa\include\vertexconflictmutation.h
+	<Mutation.h>
+	"Coloring.h"
+
+1436908174 c:\cproj\tqa\include\conflicts.h
+	<PotentialEnergy.h>
+	"Coloring.h"
+	"VertexElementaryMutation.h"
+
+1436720006 c:\cproj\tqa\include\simulatedannealing.h
+	<Annealing.h>
+
+1436784588 c:\cproj\tqa\include\annealing.h
+	"Problem.h"
+	"Function.h"
+	<math.h>
+	"pcg_random.hpp"
+	<random>
+	<algorithm>
+	<iostream>
+
+1436716076 source:c:\cproj\tqa\src\simulatedannealing.cpp
+	"SimulatedAnnealing.h"
+
+1436891893 c:\cproj\tqa\include\quantumannealing.h
+	<Annealing.h>
+
+1436988093 c:\cproj\tqa\include\kineticconflicts.h
+	<KineticEnergy.h>
+
+1436902825 c:\cproj\tqa\include\quantumannealingbounded.h
+	<Annealing.h>
+
+1437078664 c:\cproj\tqa\include\solver\problem.h
+	<vector>
+	<map>
+	<memory>
+	<iostream>
+	"PCG/pcg_random.hpp"
+
+1418655672 c:\cproj\tqa\include\pcg\pcg_random.hpp
+	<cinttypes>
+	<cstddef>
+	<cstdlib>
+	<cstring>
+	<cassert>
+	<limits>
+	<iostream>
+	<type_traits>
+	<utility>
+	<locale>
+	<new>
+	<stdexcept>
+	"pcg_extras.hpp"
+
+1418655672 c:\cproj\tqa\include\pcg\pcg_extras.hpp
+	<cinttypes>
+	<cstddef>
+	<cstdlib>
+	<cstring>
+	<cassert>
+	<limits>
+	<iostream>
+	<type_traits>
+	<utility>
+	<locale>
+	<iterator>
+	<utility>
+	<cxxabi.h>
+	"pcg_uint128.hpp"
+
+1418655672 c:\cproj\tqa\include\pcg\pcg_uint128.hpp
+	<cstdint>
+	<cstdio>
+	<cassert>
+	<climits>
+	<utility>
+	<initializer_list>
+	<type_traits>
+
+1436563944 c:\cproj\tqa\include\vertexcoloring\graph.h
+	<fstream>
+	<sstream>
+	<cstdlib>
+	<vector>
+	<iostream>
+
+1437078681 c:\cproj\tqa\include\vertexcoloring\coloring.h
+	"Solver/State.h"
+	"VertexColoring/Graph.h"
+	<random>
+	<algorithm>
+	"VertexColoring/VertexElementaryMutation.h"
+
+1437078694 c:\cproj\tqa\include\solver\state.h
+	"Solver/ElementaryMutation.h"
+	"PCG/pcg_random.hpp"
+	<memory>
+
+1436557738 c:\cproj\tqa\include\solver\elementarymutation.h
+
+1437078702 c:\cproj\tqa\include\vertexcoloring\vertexelementarymutation.h
+	<Solver/ElementaryMutation.h>
+
+1437078723 c:\cproj\tqa\include\solver\mutation.h
+	"PCG/pcg_random.hpp"
+
+1437078730 c:\cproj\tqa\include\solver\linearfunction.h
+	<Solver/Function.h>
+	<iostream>
+
+1435697197 c:\cproj\tqa\include\solver\function.h
+
+1437078742 c:\cproj\tqa\include\vertexcoloring\conflicts.h
+	<Solver/PotentialEnergy.h>
+	"VertexColoring/Coloring.h"
+	"VertexColoring/VertexElementaryMutation.h"
+
+1436709882 c:\cproj\tqa\include\solver\potentialenergy.h
+	<iostream>
+
+1437079242 c:\cproj\tqa\include\solver\simulatedannealing.h
+	<Solver/Annealing.h>
+
+1437078769 c:\cproj\tqa\include\solver\annealing.h
+	"Solver/Problem.h"
+	"Solver/Function.h"
+	<math.h>
+	"PCG/pcg_random.hpp"
+	<random>
+	<algorithm>
+	<iostream>
+
+1437078782 c:\cproj\tqa\include\vertexcoloring\kineticconflicts.h
+	<Solver/KineticEnergy.h>
+
+1436783566 c:\cproj\tqa\include\solver\kineticenergy.h
+
+1437078978 c:\cproj\tqa\include\solver\quantumannealing.h
+	<Solver/Annealing.h>
+
+1437078795 c:\cproj\tqa\include\solver\quantumannealingbounded.h
+	<Solver/Annealing.h>
+
+1437078843 c:\cproj\tqa\include\vertexcoloring\vertexconflictmutation.h
+	<Solver/Mutation.h>
+	"VertexColoring/Coloring.h"
+
+1437078855 source:c:\cproj\tqa\src\solver\linearfunction.cpp
+	"Solver/LinearFunction.h"
+
+1437078861 source:c:\cproj\tqa\src\vertexcoloring\coloring.cpp
+	"VertexColoring/Coloring.h"
+
+1437078867 source:c:\cproj\tqa\src\vertexcoloring\graph.cpp
+	"VertexColoring/Graph.h"
+
+1437123587 source:c:\users\fabien\documents\github\quantumannealing\src\run.cpp
+	<iostream>
+	"Solver/Problem.h"
+	"VertexColoring/Graph.h"
+	"VertexColoring/Coloring.h"
+	"Solver/Mutation.h"
+	"Solver/LinearFunction.h"
+	"VertexColoring/Conflicts.h"
+	"Solver/SimulatedAnnealing.h"
+	"VertexColoring/KineticConflicts.h"
+	"Solver/QuantumAnnealing.h"
+	"Solver/QuantumAnnealingBounded.h"
+	"VertexColoring/VertexConflictMutation.h"
+
+1437078664 c:\users\fabien\documents\github\quantumannealing\include\solver\problem.h
+	<vector>
+	<map>
+	<memory>
+	<iostream>
+	"PCG/pcg_random.hpp"
+
+1418655672 c:\users\fabien\documents\github\quantumannealing\include\pcg\pcg_random.hpp
+	<cinttypes>
+	<cstddef>
+	<cstdlib>
+	<cstring>
+	<cassert>
+	<limits>
+	<iostream>
+	<type_traits>
+	<utility>
+	<locale>
+	<new>
+	<stdexcept>
+	"pcg_extras.hpp"
+
+1418655672 c:\users\fabien\documents\github\quantumannealing\include\pcg\pcg_extras.hpp
+	<cinttypes>
+	<cstddef>
+	<cstdlib>
+	<cstring>
+	<cassert>
+	<limits>
+	<iostream>
+	<type_traits>
+	<utility>
+	<locale>
+	<iterator>
+	<utility>
+	<cxxabi.h>
+	"pcg_uint128.hpp"
+
+1418655672 c:\users\fabien\documents\github\quantumannealing\include\pcg\pcg_uint128.hpp
+	<cstdint>
+	<cstdio>
+	<cassert>
+	<climits>
+	<utility>
+	<initializer_list>
+	<type_traits>
+
+1436563944 c:\users\fabien\documents\github\quantumannealing\include\vertexcoloring\graph.h
+	<fstream>
+	<sstream>
+	<cstdlib>
+	<vector>
+	<iostream>
+
+1437078681 c:\users\fabien\documents\github\quantumannealing\include\vertexcoloring\coloring.h
+	"Solver/State.h"
+	"VertexColoring/Graph.h"
+	<random>
+	<algorithm>
+	"VertexColoring/VertexElementaryMutation.h"
+
+1437078694 c:\users\fabien\documents\github\quantumannealing\include\solver\state.h
+	"Solver/ElementaryMutation.h"
+	"PCG/pcg_random.hpp"
+	<memory>
+
+1436557738 c:\users\fabien\documents\github\quantumannealing\include\solver\elementarymutation.h
+
+1437078702 c:\users\fabien\documents\github\quantumannealing\include\vertexcoloring\vertexelementarymutation.h
+	<Solver/ElementaryMutation.h>
+
+1437078723 c:\users\fabien\documents\github\quantumannealing\include\solver\mutation.h
+	"PCG/pcg_random.hpp"
+
+1437078730 c:\users\fabien\documents\github\quantumannealing\include\solver\linearfunction.h
+	<Solver/Function.h>
+	<iostream>
+
+1435697197 c:\users\fabien\documents\github\quantumannealing\include\solver\function.h
+
+1437078742 c:\users\fabien\documents\github\quantumannealing\include\vertexcoloring\conflicts.h
+	<Solver/PotentialEnergy.h>
+	"VertexColoring/Coloring.h"
+	"VertexColoring/VertexElementaryMutation.h"
+
+1436709882 c:\users\fabien\documents\github\quantumannealing\include\solver\potentialenergy.h
+	<iostream>
+
+1437079242 c:\users\fabien\documents\github\quantumannealing\include\solver\simulatedannealing.h
+	<Solver/Annealing.h>
+
+1437078769 c:\users\fabien\documents\github\quantumannealing\include\solver\annealing.h
+	"Solver/Problem.h"
+	"Solver/Function.h"
+	<math.h>
+	"PCG/pcg_random.hpp"
+	<random>
+	<algorithm>
+	<iostream>
+
+1437078782 c:\users\fabien\documents\github\quantumannealing\include\vertexcoloring\kineticconflicts.h
+	<Solver/KineticEnergy.h>
+
+1436783566 c:\users\fabien\documents\github\quantumannealing\include\solver\kineticenergy.h
+
+1437078978 c:\users\fabien\documents\github\quantumannealing\include\solver\quantumannealing.h
+	<Solver/Annealing.h>
+
+1437078795 c:\users\fabien\documents\github\quantumannealing\include\solver\quantumannealingbounded.h
+	<Solver/Annealing.h>
+
+1437078843 c:\users\fabien\documents\github\quantumannealing\include\vertexcoloring\vertexconflictmutation.h
+	<Solver/Mutation.h>
+	"VertexColoring/Coloring.h"
+
+1437078855 source:c:\users\fabien\documents\github\quantumannealing\src\solver\linearfunction.cpp
+	"Solver/LinearFunction.h"
+
+1437078861 source:c:\users\fabien\documents\github\quantumannealing\src\vertexcoloring\coloring.cpp
+	"VertexColoring/Coloring.h"
+
+1437078867 source:c:\users\fabien\documents\github\quantumannealing\src\vertexcoloring\graph.cpp
+	"VertexColoring/Graph.h"
+
