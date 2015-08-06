@@ -16,18 +16,15 @@ class VertexConflictMutation : public Mutation
 
         template <typename stateType, typename elemMutation>
         static std::unique_ptr<elemMutation> getElementaryMutation(const stateType &state, pcg32 &rng) { return Mutation::getElementaryMutation(state,rng); };
-    protected:
-    private:
+
 };
 
+//These methods are the ones called normally.
 template<>
 void VertexConflictMutation::DoMutation<Coloring, VertexElementaryMutation>(Coloring &state, const VertexElementaryMutation &mut){
+    auto previousColor = state.coloring[mut.getVertex()];
 
-    int previousColor = state.coloring[mut.getVertex()];
-
-    //if (previousColor == m.getColor()) return;
     state.affectColor(mut.getVertex(), mut.getColor());
-    //std::cout << previousColor << "c" << m.getColor() << std::endl;
     state.updateLocal(mut.getVertex(), previousColor);
 	//Requires to update backMutation in State (so change can be turned back).
 }
@@ -35,21 +32,11 @@ void VertexConflictMutation::DoMutation<Coloring, VertexElementaryMutation>(Colo
 template<>
 std::unique_ptr<VertexElementaryMutation> VertexConflictMutation::getElementaryMutation<Coloring, VertexElementaryMutation>(const Coloring &state, pcg32 &rng){
     std::uniform_int_distribution<int> distributionVertex(0, state.verticesInConflict.size()-1);
-    int randomVertex = distributionVertex(rng);
+    auto randomVertex = distributionVertex(rng);
     randomVertex = state.verticesInConflict[randomVertex];
-    //std::cout << randomVertex << " " << c.getVerticesInConflict().size() << std::endl;
-
-    /*for (auto it : state.verticesInConflict){
-        if (randomVertex == 0) {
-            randomVertex = it;
-            break;
-        }
-        --randomVertex;
-    }*/
 
     std::uniform_int_distribution<int> distributionCouleur(0, state.getMaxColors()-1);
-    int randomColor = distributionCouleur(rng);
-    //What if it's the same color??? let QA take care of it.
+    auto randomColor = distributionCouleur(rng);
 
     return std::unique_ptr<VertexElementaryMutation>(new VertexElementaryMutation(randomVertex, randomColor));
 }

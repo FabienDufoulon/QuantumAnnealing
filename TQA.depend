@@ -267,7 +267,7 @@
 1437078867 source:c:\cproj\tqa\src\vertexcoloring\graph.cpp
 	"VertexColoring/Graph.h"
 
-1437123587 source:c:\users\fabien\documents\github\quantumannealing\src\run.cpp
+1438626117 source:c:\users\fabien\documents\github\quantumannealing\src\run.cpp
 	<iostream>
 	"Solver/Problem.h"
 	"VertexColoring/Graph.h"
@@ -328,48 +328,47 @@
 	<initializer_list>
 	<type_traits>
 
-1436563944 c:\users\fabien\documents\github\quantumannealing\include\vertexcoloring\graph.h
+1438621359 c:\users\fabien\documents\github\quantumannealing\include\vertexcoloring\graph.h
 	<fstream>
 	<sstream>
 	<cstdlib>
 	<vector>
 	<iostream>
 
-1437078681 c:\users\fabien\documents\github\quantumannealing\include\vertexcoloring\coloring.h
+1438621266 c:\users\fabien\documents\github\quantumannealing\include\vertexcoloring\coloring.h
 	"Solver/State.h"
 	"VertexColoring/Graph.h"
 	<random>
 	<algorithm>
 	"VertexColoring/VertexElementaryMutation.h"
 
-1437078694 c:\users\fabien\documents\github\quantumannealing\include\solver\state.h
+1438621239 c:\users\fabien\documents\github\quantumannealing\include\solver\state.h
 	"Solver/ElementaryMutation.h"
 	"PCG/pcg_random.hpp"
 	<memory>
 
 1436557738 c:\users\fabien\documents\github\quantumannealing\include\solver\elementarymutation.h
 
-1437078702 c:\users\fabien\documents\github\quantumannealing\include\vertexcoloring\vertexelementarymutation.h
+1438621671 c:\users\fabien\documents\github\quantumannealing\include\vertexcoloring\vertexelementarymutation.h
 	<Solver/ElementaryMutation.h>
 
-1437078723 c:\users\fabien\documents\github\quantumannealing\include\solver\mutation.h
+1438621168 c:\users\fabien\documents\github\quantumannealing\include\solver\mutation.h
 	"PCG/pcg_random.hpp"
 
-1437078730 c:\users\fabien\documents\github\quantumannealing\include\solver\linearfunction.h
+1438621989 c:\users\fabien\documents\github\quantumannealing\include\solver\linearfunction.h
 	<Solver/Function.h>
-	<iostream>
 
-1435697197 c:\users\fabien\documents\github\quantumannealing\include\solver\function.h
+1438892550 c:\users\fabien\documents\github\quantumannealing\include\solver\function.h
 
-1437078742 c:\users\fabien\documents\github\quantumannealing\include\vertexcoloring\conflicts.h
+1438621466 c:\users\fabien\documents\github\quantumannealing\include\vertexcoloring\conflicts.h
 	<Solver/PotentialEnergy.h>
 	"VertexColoring/Coloring.h"
 	"VertexColoring/VertexElementaryMutation.h"
 
-1436709882 c:\users\fabien\documents\github\quantumannealing\include\solver\potentialenergy.h
+1438621172 c:\users\fabien\documents\github\quantumannealing\include\solver\potentialenergy.h
 	<iostream>
 
-1437079242 c:\users\fabien\documents\github\quantumannealing\include\solver\simulatedannealing.h
+1438625733 c:\users\fabien\documents\github\quantumannealing\include\solver\simulatedannealing.h
 	<Solver/Annealing.h>
 
 1437078769 c:\users\fabien\documents\github\quantumannealing\include\solver\annealing.h
@@ -381,27 +380,27 @@
 	<algorithm>
 	<iostream>
 
-1437078782 c:\users\fabien\documents\github\quantumannealing\include\vertexcoloring\kineticconflicts.h
+1438626178 c:\users\fabien\documents\github\quantumannealing\include\vertexcoloring\kineticconflicts.h
 	<Solver/KineticEnergy.h>
 
-1436783566 c:\users\fabien\documents\github\quantumannealing\include\solver\kineticenergy.h
+1438621178 c:\users\fabien\documents\github\quantumannealing\include\solver\kineticenergy.h
 
-1437078978 c:\users\fabien\documents\github\quantumannealing\include\solver\quantumannealing.h
+1438626672 c:\users\fabien\documents\github\quantumannealing\include\solver\quantumannealing.h
 	<Solver/Annealing.h>
 
-1437078795 c:\users\fabien\documents\github\quantumannealing\include\solver\quantumannealingbounded.h
+1438627020 c:\users\fabien\documents\github\quantumannealing\include\solver\quantumannealingbounded.h
 	<Solver/Annealing.h>
 
-1437078843 c:\users\fabien\documents\github\quantumannealing\include\vertexcoloring\vertexconflictmutation.h
+1438621628 c:\users\fabien\documents\github\quantumannealing\include\vertexcoloring\vertexconflictmutation.h
 	<Solver/Mutation.h>
 	"VertexColoring/Coloring.h"
 
-1437078855 source:c:\users\fabien\documents\github\quantumannealing\src\solver\linearfunction.cpp
+1438622286 source:c:\users\fabien\documents\github\quantumannealing\src\solver\linearfunction.cpp
 	"Solver/LinearFunction.h"
 
-1437078861 source:c:\users\fabien\documents\github\quantumannealing\src\vertexcoloring\coloring.cpp
+1438620978 source:c:\users\fabien\documents\github\quantumannealing\src\vertexcoloring\coloring.cpp
 	"VertexColoring/Coloring.h"
 
-1437078867 source:c:\users\fabien\documents\github\quantumannealing\src\vertexcoloring\graph.cpp
+1438621365 source:c:\users\fabien\documents\github\quantumannealing\src\vertexcoloring\graph.cpp
 	"VertexColoring/Graph.h"
 

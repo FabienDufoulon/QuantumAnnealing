@@ -20,8 +20,7 @@ class KineticEnergy
 
         template <typename stateType, typename elementaryMutation>
         static double getDifferenceEnergyBounded(const stateType &state, const stateType &next, const stateType &prev, const elementaryMutation &mutElem) {return 0;};
-    protected:
-    private:
+
 };
 
 #endif // KINETICENERGY_H

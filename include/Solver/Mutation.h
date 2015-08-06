@@ -17,8 +17,7 @@ class Mutation
 
         template <typename stateType, typename elemMutation>
         static std::unique_ptr<elemMutation> getElementaryMutation(const stateType &state, pcg32 &rng) {return nullptr;};
-    protected:
-    private:
+
 };
 
 #endif // MUTATION_H

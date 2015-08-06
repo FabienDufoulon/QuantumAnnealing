@@ -17,8 +17,6 @@ class Problem
         virtual ~Problem();
 
         std::vector<std::shared_ptr<stateType>> states;
-        //std::map<stateType*,stateType> nextStates;
-        //std::map<stateType*,stateType> prevStates;
 
         template <typename potEnergy, typename elementaryMutation>
         double calculatePotentialEnergyDifferenceFast(const elementaryMutation &mutElem, int stateIndex);
@@ -55,22 +53,10 @@ class Problem
 };
 
 template <typename stateType>
-Problem<stateType>::Problem(std::vector<std::shared_ptr<stateType>> stateVector) : states(stateVector)
-{
-    //std::cout << "Map " << nextStates.max_size() << " " << prevStates.max_size() << std::endl;
-    //std::shared_ptr<stateType> previousState(states.back());
-    /*for (auto pt : states){
-        prevStates.insert(std::make_pair(pt, *previousState));
-        nextStates.insert(std::make_pair(previousState, *pt));
-        previousState.reset(pt);
-    }*/
-}
+Problem<stateType>::Problem(std::vector<std::shared_ptr<stateType>> stateVector) : states(stateVector) {}
 
 template <typename stateType>
-Problem<stateType>::~Problem()
-{
-    //dtor
-}
+Problem<stateType>::~Problem() {}
 
 template <typename stateType>
 std::shared_ptr<stateType> Problem<stateType>::getNext(int stateIndex){
@@ -90,19 +76,16 @@ std::shared_ptr<stateType> Problem<stateType>::getPrevious(int stateIndex){
 template <typename stateType>
 template <typename potEnergy, typename elementaryMutation>
 double Problem<stateType>::calculatePotentialEnergyDifferenceFast(const elementaryMutation &mutElem, int stateIndex){
-    //if (getPotentialEnergy(pot, state) < 0) std::cout << "Calculating DEp : " << getPotentialEnergy(pot, state) << std::endl;
     return potEnergy::template getDifferenceEnergy<stateType, elementaryMutation>(*states[stateIndex], mutElem);
 }
 
 template <typename stateType>
 template <typename potEnergy, typename mutation, typename elementaryMutation>
 double Problem<stateType>::calculatePotentialEnergyDifference(const elementaryMutation &mutElem, int stateIndex){
-    //std::cout << "Calculating DEp : " << getPotentialEnergy(pot, state) << std::endl;
-    double energy = potEnergy::template getEnergy<stateType>(*states[stateIndex]);
+    auto energy = potEnergy::template getEnergy<stateType>(*states[stateIndex]);
     mutation::template DoMutation(*states[stateIndex], mutElem);
-    double energyAfterMutation = potEnergy::template getEnergy<stateType>(*states[stateIndex]);
+    auto energyAfterMutation = potEnergy::template getEnergy<stateType>(*states[stateIndex]);
     mutation::template DoMutation(*states[stateIndex], *(states[stateIndex]->backMutation));
-    //std::cout << "finished DEp : " << getPotentialEnergy(pot, state) << std::endl;
 
     return energyAfterMutation-energy;
 }
@@ -110,7 +93,6 @@ double Problem<stateType>::calculatePotentialEnergyDifference(const elementaryMu
 template <typename stateType>
 template <typename kinEnergy, typename elementaryMutation>
 double Problem<stateType>::calculateKineticEnergyDifferenceFast(const elementaryMutation &mutElem, int stateIndex){
-    //std::cout << "in problem" << std::endl;
     return kinEnergy::template getDifferenceEnergy<stateType, elementaryMutation>(*states[stateIndex], *getNext(stateIndex),
                                                                                    *getPrevious(stateIndex), mutElem);
 }
@@ -118,7 +100,6 @@ double Problem<stateType>::calculateKineticEnergyDifferenceFast(const elementary
 template <typename stateType>
 template <typename kinEnergy, typename elementaryMutation>
 double Problem<stateType>::calculateKineticEnergyDifferenceBounded(const elementaryMutation &mutElem, int stateIndex){
-    //std::cout << "in problem" << std::endl;
     return kinEnergy::template getDifferenceEnergyBounded<stateType, elementaryMutation>(*states[stateIndex], *getNext(stateIndex),
                                                                                    *getPrevious(stateIndex), mutElem);
 }
@@ -126,9 +107,9 @@ double Problem<stateType>::calculateKineticEnergyDifferenceBounded(const element
 template <typename stateType>
 template <typename kinEnergy, typename mutation, typename elementaryMutation>
 double Problem<stateType>::calculateKineticEnergyDifference(const elementaryMutation &mutElem, int stateIndex){
-    double energy = kinEnergy::template getEnergy<stateType>(*this);
+    auto energy = kinEnergy::template getEnergy<stateType>(*this);
     mutation::template DoMutation(*states[stateIndex], mutElem);
-    double energyAfterMutation = kinEnergy::template getEnergy<stateType>(*this);
+    auto energyAfterMutation = kinEnergy::template getEnergy<stateType>(*this);
     mutation::template DoMutation(*states[stateIndex], *(states[stateIndex]->backMutation));
 
     return energyAfterMutation-energy;
@@ -137,7 +118,6 @@ double Problem<stateType>::calculateKineticEnergyDifference(const elementaryMuta
 template <typename stateType>
 template <typename potEnergy>
 double Problem<stateType>::getPotentialEnergy(int stateIndex){
-    //std::cout << "BC" << std::endl;
     return potEnergy::template getEnergy<stateType>(*states[stateIndex]);
 }
 

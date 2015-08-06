@@ -11,13 +11,12 @@ class Graph
 {
     public:
         Graph(std::string &textFile);
-        virtual ~Graph();
+        virtual ~Graph() {};
 
         //Stores connections for each vertex to other vertices. (stored is vertex index, so going from 0 to numberOfVertices - 1)
         std::vector<std::vector<double>> connections;
-        int getNumberVertices();
-    protected:
-    private:
+        int getNumberVertices() {return connections.size();};
+
 };
 
 //Functions to make splitting string in text file parsing much easier
@@ -29,7 +28,7 @@ static std::vector<std::string> &split(const std::string &s, char delim, std::ve
         elems.push_back(item);
     }
     return elems;
-};
+}
 
 
 static std::vector<std::string> split(const std::string &s, char delim) {

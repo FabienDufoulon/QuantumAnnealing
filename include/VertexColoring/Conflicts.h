@@ -12,15 +12,14 @@ class Conflicts : public PotentialEnergy
         virtual ~Conflicts() {}
 
         template <typename stateType>
-        static double getEnergy(const stateType &state) {std::cout << "Derived" << std::endl; return PotentialEnergy::getEnergy(state);};
+        static double getEnergy(const stateType &state) {return PotentialEnergy::getEnergy(state);}; //shouldn't be called
 
         template <typename stateType, typename elementaryMutation>
-        static double getDifferenceEnergy(const stateType &state, const elementaryMutation &mutElem) {return PotentialEnergy::getDifferenceEnergy(state, mutElem);};
-    protected:
-    private:
+        static double getDifferenceEnergy(const stateType &state, const elementaryMutation &mutElem) {return PotentialEnergy::getDifferenceEnergy(state, mutElem);}; //shouldn't be called
+
 };
 
-
+//These methods are the ones called normally.
 template<>
 double Conflicts::getEnergy<Coloring>(const Coloring &state){
     return state.getNumberOfEdgesInConflict();

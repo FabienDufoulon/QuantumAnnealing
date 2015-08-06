@@ -1,25 +1,19 @@
 #include "Solver/LinearFunction.h"
 
-LinearFunction::LinearFunction(double startP, double endP, int nbSteps, int stepPlateau) : Function(startP, endP, nbSteps, stepPlateau)
+LinearFunction::LinearFunction(double startP, double endP, int nbSteps, int plateauIts) : Function(startP, endP, nbSteps, plateauIts)
 {
-    pointStep = (endP - startP) / nbSteps;
-    stepOnPlateau = 0;
-}
-
-LinearFunction::~LinearFunction()
-{
-    //dtor
+    decreaseByStep = (endP - startP) / nbSteps;
+    plateauCurrentIteration = 0;
 }
 
 bool LinearFunction::step(){
-    ++stepOnPlateau;
+    ++plateauCurrentIteration;
 
-    if (stepOnPlateau == stepPlateau) {
-        currentPoint += pointStep;
-        stepOnPlateau = 0;
+    if (plateauCurrentIteration == iterationsByPlateau) {
+        currentPoint += decreaseByStep;
+        plateauCurrentIteration = 0;
     }
 
     if (currentPoint < endPoint) return false;
     else return true;
-
 }

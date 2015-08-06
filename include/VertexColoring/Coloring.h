@@ -18,32 +18,17 @@ class Coloring : public State
         int spin(int vertex, int vertex2) const;
 
         int getNumberOfEdgesInConflict() const { return edgesInConflict;};
-        //std::vector<std::vector<int>>& getF() const { return F;};
-        //std::vector<int>& getColoring() const { return coloring;};
-        //std::unordered_set<int>& getVerticesInConflict() const { return verticesInConflict;};
-        //std::vector<std::unordered_set<int>>& getColorClasses() const { return colorClasses;};
         int getMaxColors() const {return maxColors;};
         void affectColor(int vertex, int color) {coloring[vertex] = color;};
 
         bool goodColoring() const;
 
-        //std::vector<std::unordered_set<int>> colorClasses;
         std::vector<std::vector<int>> colorClasses; //Color classes vectors are sorted
         ///Unordered set of vertices in conflict. There are no duplicates due to the nature of the data structure.
-        //std::unordered_set<int> verticesInConflict;
         std::vector<int> verticesInConflict; //Vertices in conflict vector is sorted
         std::vector<std::vector<int>> F;
         std::vector<int> coloring;
         std::vector<int> bestColoring;
-
-        /*void setNext(Coloring* n) {std::cout << "setting next "; this->next = n; std::cout << next->getMaxColors() << std::endl;};
-        void setPrevious(Coloring* p) {std::cout << "setting prev "; this->previous = p; std::cout << previous->getMaxColors() << std::endl;};
-        Coloring* getNext() const {std::cout << "coloring : "; std::cout << typeid(*next).name() << std::endl; return next;};
-        Coloring* getPrevious() const {std::cout << "coloring" << std::endl; return previous;};*/
-
-    protected:
-        //Coloring* next;
-        //Coloring* previous;
 
     private:
         Graph& graph;

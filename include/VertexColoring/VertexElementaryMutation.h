@@ -12,7 +12,7 @@ class VertexElementaryMutation : public ElementaryMutation
 
         int getVertex() const {return vertex;};
         int getColor() const {return color;};
-    protected:
+
     private:
         int vertex;
         int color;

@@ -43,7 +43,6 @@
 		<Unit filename="include/Solver/KineticEnergy.h" />
 		<Unit filename="include/Solver/LinearFunction.h" />
 		<Unit filename="include/Solver/Mutation.h" />
-		<Unit filename="include/Solver/Node.h" />
 		<Unit filename="include/Solver/PotentialEnergy.h" />
 		<Unit filename="include/Solver/Problem.h" />
 		<Unit filename="include/Solver/QuantumAnnealing.h" />

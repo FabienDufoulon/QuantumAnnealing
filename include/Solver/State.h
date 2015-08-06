@@ -15,19 +15,11 @@ class State
         State() {};
         virtual ~State() {};
 
-        /*virtual void setNext(State* n) {next = n;};
-        virtual void setPrevious(State* p) {previous = p;};
-        virtual State* getNext() const {return next;};
-        virtual State* getPrevious() const {return previous;};*/
 
         virtual void initStart(pcg32 &rng) {};
 
         std::unique_ptr<ElementaryMutation> backMutation; // Mutation to return to previous state.
 
-    protected:
-        //State* next;
-        //State* previous;
-    private:
 };
 
 #endif // STATE_H

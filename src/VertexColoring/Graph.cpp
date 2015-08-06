@@ -16,20 +16,9 @@ Graph::Graph(std::string &textFile)
             connections = std::vector<std::vector<double>>(vertices, std::vector<double> {});
         }
         else if(line[0] == "e" ){
-            //int firstVertexIndex = std::stoi(line[1]) - 1;
-            //int secondVertexIndex = std::stoi(line[2]) - 1;
             connections[std::stoi(line[1]) - 1].push_back(std::stoi(line[2]) - 1);
             connections[std::stoi(line[2]) - 1].push_back(std::stoi(line[1]) - 1);
         }
     }
 
-}
-
-Graph::~Graph()
-{
-    //dtor
-}
-
-int Graph::getNumberVertices(){
-    return connections.size();
 }
